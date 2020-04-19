@@ -78,6 +78,7 @@
                 .overview3 {
                     border-top: 6px solid;
                     border-image-slice: 1;
+                    border-radius: .25rem;
                     border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
                 }
                 
@@ -353,49 +354,55 @@
                 
                 @media only screen and (max-width: 800px) {
                     body {
-                        width: auto;
-                        height: 2750px;
+                        max-width: 800px;
+                        height: 2650px;
+                        margin: 0 auto;
+                        padding: 0;
                     }
                     .container-overview {
                         display: grid;
                         grid-gap: 30px;
-                        width: 100vw;
-                        grid-template-columns: repeat(1, auto);
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                     }
                     .grid-container {
                         display: grid;
                         grid-gap: 30px;
-                        width: 100vw;
-                        grid-template-columns: repeat(1, auto);
+                        grid-gap: 30px;
+                        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
                     }
                     hr {
                         display: block;
+                        width: 85%;
+                        margin-left: 2px;
                     }
                     .header-divider {
                         display: block;
                         margin-bottom: 50px;
                     }
                     .header-divider h4 {
-                        margin-left: 10px;
+                        margin-left: -2px;
                         color: hsl(228, 34%, 66%);
                         margin-top: 35px;
                     }
                     .header-divider .switch {
-                        margin-left: 200px;
+                        margin-left: 180px;
                         position: absolute;
                         margin-top: -46px;
                     }
                     .header-divider h1 {
                         font-size: 22px;
+                        margin-left: -2px;
                     }
                     .top-header p {
                         font-size: 14px;
                         margin-top: -17px;
                         font-weight: bold;
+                        margin-left: -px;
                     }
                     .over-view {
                         margin-top: 45px;
                         font-size: 22px;
+                        margin-left: px;
                     }
                     .footer-text {
                         text-align: center;
